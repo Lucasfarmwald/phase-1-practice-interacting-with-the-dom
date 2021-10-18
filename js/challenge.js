@@ -1,10 +1,7 @@
+ const minusBtn = document.getElementById("minus");
+ const plusBtn = document.getElementById('plus');
+ const pauseBtn = document.getElementById('pause');
+ const heartBtn = document.getElementById('heart');
 
-
-console.log(document.getElementById('minus').addEventListener('click',myFunction()))
-  
-
- function myFunction (){
-    document.getElementById('minus')
-
-}
-
+ 
+ minusBtn.addEventListener('click',function(){})
