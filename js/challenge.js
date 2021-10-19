@@ -2,8 +2,10 @@
  const plusBtn = document.getElementById('plus');
  const pauseBtn = document.getElementById('pause');
  const heartBtn = document.getElementById('heart');
- const counter = document.getElementById('counter')
-
+ const counter = document.getElementById('counter');
+ const commentInput = document.getElementById('comment-input');
+ const submitBtn = document.getElementById('submit');
+ let pause = false
 
 
 // starts timer when page is loaded
@@ -31,12 +33,35 @@
 
 pauseBtn.addEventListener('click',function (){
    clearInterval(timer)
-    if(pauseBtn){
+   console.log("before change",pause)
+    if(pause){
+        pause = false
         pauseBtn.innerText = "pause"
+        timer = setInterval(() => {
+            counter.innerText++
+        }, 1000);
+        console.log(pause)
     }else{
+        pause = true
         pauseBtn.innerText = "resume"
+        console.log(pause)
     }
     //console.log(pauseBtn)
 })
 
-// when pause button has been clicked, interval resumes when clicked again.
+// when hearBtn is clicked it takes the number it clicked on and stores it in a "li"
+
+
+heartBtn.addEventListener('click', function(){
+    console.log(heartBtn)
+})
+
+
+
+// comment box will display comments on the webpage.
+
+submitBtn.addEventListener('click',function(e){
+    e.preventDefault()
+    commentInput.appendChild('list')
+    console.log(submitBtn)
+})
