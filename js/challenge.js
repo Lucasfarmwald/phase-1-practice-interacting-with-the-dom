@@ -31,7 +31,11 @@
 
 pauseBtn.addEventListener('click',function (){
    clearInterval(timer)
-   
+    if(pauseBtn){
+        pauseBtn.innerText = "pause"
+    }else{
+        pauseBtn.innerText = "resume"
+    }
     //console.log(pauseBtn)
 })
 
