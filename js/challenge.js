@@ -5,6 +5,8 @@
  const counter = document.getElementById('counter');
  const commentInput = document.getElementById('comment-input');
  const submitBtn = document.getElementById('submit');
+ const list = document.getElementById('list');
+ const likes = document.querySelector('.likes')
  let pause = false
 
 
@@ -53,6 +55,13 @@ pauseBtn.addEventListener('click',function (){
 
 
 heartBtn.addEventListener('click', function(){
+    // create an li
+    let li = document.createElement('li')
+    // add text this counter has been liked this many times to li
+    li.innerText = counter.innerText
+    console.log(li)
+    // append li to page
+    likes.appendChild(li)
     console.log(heartBtn)
 })
 
@@ -62,6 +71,13 @@ heartBtn.addEventListener('click', function(){
 
 submitBtn.addEventListener('click',function(e){
     e.preventDefault()
-    commentInput.appendChild('list')
-    console.log(submitBtn)
+// create new element
+ let li = document.createElement('li')
+// comment input value into element
+ li.innerText = commentInput.value
+// append to page
+
+    list.appendChild(li)
+    //commentInput.innerText
+    console.log(commentInput.value)
 })
