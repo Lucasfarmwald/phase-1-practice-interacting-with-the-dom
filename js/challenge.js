@@ -8,7 +8,7 @@
 
 // starts timer when page is loaded
 
- setInterval(() => {
+ let timer = setInterval(() => {
      counter.innerText++
  }, 1000);
 
@@ -27,11 +27,12 @@
    console.log(typeof counter.innerText)
  })
 
-// pause the counter when the "pause" button is clicked.
+// pause the timer when the "pause" button is clicked.
 
 pauseBtn.addEventListener('click',function (){
-   setInterval(() => {
-       counter
-   }, 0);
+   clearInterval(timer)
+   
     //console.log(pauseBtn)
 })
+
+// when pause button has been clicked, interval resumes when clicked again.
