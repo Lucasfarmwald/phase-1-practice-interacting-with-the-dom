@@ -8,10 +8,9 @@
 
 // starts timer when page is loaded
 
-function startTimer(){
-    counter.innerText = parseInt(counter.innerText) + 1
-    counter
-}
+ setInterval(() => {
+     counter.innerText++
+ }, 1000);
 
 
  // subtract 1 to the counter when the "minus" button is clicked.
@@ -31,6 +30,8 @@ function startTimer(){
 // pause the counter when the "pause" button is clicked.
 
 pauseBtn.addEventListener('click',function (){
-    counter.innerText =
-    console.log(pauseBtn)
+   setInterval(() => {
+       counter
+   }, 0);
+    //console.log(pauseBtn)
 })
